@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="title icon" href="images/title-img.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <!-- padding: push the tagged element to create more space -->
+    <!-- margin:  push the external elements away from the tagged element to create space -->
+
+    <!-- Navbar -->
+    <!-- navbar-expand-md: collapse the navbar as soon as the screensize becomes less than medium -->
+    <!-- data-toggle="collapse": this attribute is used by js behind the scenes -->
+    <!-- data-target="#myNavbar": to indicate id -->
+    <!-- class="navbar-toggler-icon": transform button into menu icon upon navbar collapse -->
+    <!-- ml-auto: the button menu icon floats to the right -->
+    <!-- mb-2: margin bottom 2 creates space at the bottom of the icon -->
+    <!-- bg-light: background colour light  -->
+    <div class="nav navbar navbar-expand-md navbar-light">
+      <button type="button" class="navbar-toggler ml-auto mb-2 bg-light" data-toggle="collapse" data-target="#myNavbar" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- div to hold navbar items. id="myNavbar" should match data-target="#myNavbar" above as shown -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Sidebar -->
+            <!-- fixed-top fixes the default padding on the sidebar (the padding still exists but it is covered) 
+              col-xl-2: stretch it wide in wide screens - pair it with col-xl-10 on top-nav
+              col-md-4: sidebar won't cover the full screen when screen collapses to medium devices pair it
+              ...with col-md-8 for the top-nav
+            -->
+            <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+              <!-- d-block: display block because we want the element to take full width of the column -->
+              <!-- mx-auto: centers the block in the middle. MX= MiddleX-(axis) centre it along x-axis -->
+              <!-- text-centre: pull the text to the centre of the element -->
+              <!-- py-3: padding on the y-axis (both top and bottom) = 3px -->
+              <!-- mb-4: margin bottom = 4px -->
+              <!-- bottom-border: custom css class -->
+              <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 bottom-border mb-4"> CodeAndCreate</a>
+              <div class="bottom-border pb-3">
+                <img src="images/admin.jpeg" width="50" class="rounded-circle mr-3">
+                <a href="#" class="text-white">Helen Smith</a>
+              </div>
+              <!-- ul attributes
+                mt-4: add some space bettween bottom-border above and the Home Icon
+               -->
+              <ul class="navbar-nav flex-column mt-4">
+                <li class="nav-item">
+                  <!-- icon attributes
+                                      fa-home: Get the home icon
+                                      text-light: make the icon have a lighter color
+                                      fa-lg: increase the size of the icon
+                                      mr-3: push the text dashboard to the right
+                                     -->
+                  
+                  <!-- a tag text attributes (Style the text "Dashboard")
+                                      text-white: get white text
+                                      p-3: padding all around the text is 3
+                                      mb-2: margin at the bottom is 2px. i.e push all the other elements down by 2px
+                                      sidebar-link: custom css class
+                                      -->
+                  <a href="#" class="nav-link text-white p-3 mb-2 current"><i class="fa fa-home text-light fa-lg mr-3"></i>Dashboard</a>
+                </li>
+
+                <!-- duplicate the nav items above 8 times -->
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fa fa-user text-light fa-lg mr-3"></i>Profile
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fa fa-envelope text-light fa-lg mr-3"></i>Inbox
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fa fa-shopping-cart text-light fa-lg mr-3"></i>Sales
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fa fa-chart-line text-light fa-lg mr-3"></i>Analytics
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fa fa-chart-bar text-light fa-lg mr-3"></i>Charts
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fa fa-table text-light fa-lg mr-3"></i>Tables
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fa fa-wrench text-light fa-lg mr-3"></i>Settings
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fa fa-file-alt text-light fa-lg mr-3"></i>Documentation
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+            <!-- End Sidebar -->
+
+            <!-- top nav -->
+            <!-- col-lg-9 attributes
+              ml-auto: push it to the left so that it's not covered by the sidebar
+              bg-dark: make the background colour dark
+              fixed-top: to get rid of default padding
+              py-2: padding top and bottom = 2px. py means pading on y-axis
+              top-navbar: custom css class to define styles on breakpoints of screen media
+             -->
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-dark fixed-top py-2 top-navbar">
+              <!-- row class attributes: 3 columns inside the row
+                1st col: col-md-4: contains tittle
+                2nd-col: col-md-5: conatins search bar
+                3rd-col: col-md-3: contains nav-items for logout, notifications, and comments
+
+                align-items-center: center all the items
+               -->
+              <div class="row align-items-center ">
+
+                <div class="col-md-4">
+                  <!-- 
+                    text-light: light colored text
+                    text-uppercarse: Make text upper case
+                    mb-0: by default heading has margin bottom set as 0.5rem so get rid of it
+                   -->
+                  <h4 class="text-light text-uppercase mb-0">Dashboard</h4>
+                </div>
+
+                <div class="col-md-5">
+                  <form>
+                    <div class="input-group">
+                      <!-- 
+                        search-input: custom css class for the search input
+                        search-button: custom css class for the search button 
+                       -->
+                      <input type="text" class="form-control search-input" placeholder="Search..." >
+                      <button class="btn btn-white search-button">
+                        <!-- 
+                          text-danger: color the icon red
+                         -->
+                        <i class="fa fa-search text-danger"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="col-md-3">
+                  <ul class="navbar-nav">
+
+                    <!-- 
+                      Create custom classes to add notification styles on the comments and notification icons
+
+                      icon-parent: custom class assigned to the list tag <li>
+                      icon-bullet: custom class assigned to the a tag <a> containing the icon
+                     -->
+                    <li class="nav-item icon-parent">
+                      <a href="#" class="nav-link icon-bullet">
+                        <i class="fa fa-comments text-muted fa-lg"></i>
+                      </a>
+                    </li>
+
+                    <li class="nav-item icon-parent">
+                      <a href="#" class="nav-link icon-bullet">
+                        <i class="fa fa-bell text-muted fa-lg"></i>
+                      </a>
+                    </li>
+
+
+                    <!-- ml-auto: push the logout button to the left -->
+                    <!-- ml-md-auto: push the logout to the left on large devices and to the right on small devices -->
+                    <li class="nav-item ml-md-auto">
+                      <a href="#" class="nav-link">
+                        <i class="fa fa-sign-out-alt text-danger fa-lg"></i>
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+            <!-- end top nav -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- End Navbar -->
+    
+  
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
