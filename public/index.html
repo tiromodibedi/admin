@@ -188,11 +188,14 @@
                       </a>
                     </li>
 
-
                     <!-- ml-auto: push the logout button to the left -->
                     <!-- ml-md-auto: push the logout to the left on large devices and to the right on small devices -->
                     <li class="nav-item ml-md-auto">
-                      <a href="#" class="nav-link">
+                      <!-- 
+                        data-toggle="modal": open a modal upon clicking this button
+                        data-target="#sign-out": match to the id of modal
+                       -->
+                      <a href="#" class="nav-link" data-toggle="modal" data-target="#sign-out" >
                         <i class="fa fa-sign-out-alt text-danger fa-lg"></i>
                       </a>
                     </li>
@@ -209,9 +212,33 @@
 
     </div>
     <!-- End Navbar -->
+
+    <!-- Modal -->
+    <!-- This modal will be open upon clicking the logout icon so we need to link them -->
+    <!-- fade: adds a fading effect on close -->
+    <div class="modal fade" id="sign-out">
+      <!-- open a modal dialog which has some deafult classes.. transition, postion e.t.c -->
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Want to Leave?</h4>
+            <!-- data-dismiss: to close the modal upon button click -->
+            <button type="button" class="close" data-dismiss="modal" >&times;</button>
+          </div>
+          <div class="modal-body">
+            Press logout to leave
+          </div>
+          <div class="modal-footer">
+            <!-- data-dismiss: to close the modal upon button click -->
+            <button type="button" data-dismiss="modal" class="btn btn-success">Stay Here</button>
+            <button type="button" data-dismiss="modal" class="btn btn-danger">Logout</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- End Modal -->
     
-  
-   
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
